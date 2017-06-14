@@ -18,6 +18,7 @@
             name: {value: ''},
             label: {value: 'text'},
             format: {value: '{{msg.payload}}'},
+            additionalText: {value: 'text'},
             layout: {value:'row-spread'}
         },
         inputs:1,
@@ -66,6 +67,10 @@
     <div class="form-row">
         <label for="node-input-format"><i class="fa fa-i-cursor"></i> Value format</label>
         <input type="text" id="node-input-format" placeholder="{{msg.payload}}">
+    </div>
+    <div class="form-row">
+        <label for="node-input-additionalText"><i class="fa fa-i-cursor"></i> Additional text</label>
+        <input type="text" id="node-input-additionalText">
     </div>
     <div class="form-row">
         <label style="vertical-align: top"><i class="fa fa-th-large"></i> Layout</label>

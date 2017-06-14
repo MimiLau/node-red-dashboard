@@ -12,6 +12,10 @@ angular.module('ui').controller('uiComponentController', ['$scope', 'UiEvents', 
             me.item.getLabel = $interpolate(me.item.label).bind(null, me.item);
         }
 
+        if (typeof me.item.additionalText === "string") {
+            me.item.getAdditionalText = $interpolate(me.item.additionalText).bind(null, me.item);
+        }
+
         me.init = function () {
             switch (me.item.type) {
                 case 'button': {

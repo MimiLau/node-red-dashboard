@@ -28,6 +28,7 @@ module.exports = function(RED) {
                 label: config.label,
                 order: config.order,
                 format: config.format,
+                additionalText: config.additionalText,
                 width: config.width || group.config.width || 6,
                 height: config.height || 1,
                 layout: angLayout,
