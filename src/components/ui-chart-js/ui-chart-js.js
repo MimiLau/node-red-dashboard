@@ -114,12 +114,13 @@ function loadConfiguration(type,scope) {
         spanGaps: true,
         scales: {},
         legend: false,
+        pieceLabel: {},
         responsive: true,
         maintainAspectRatio: false
     };
     if (type === 'pie') {
         config.options.cutoutPercentage = scope.$eval('me.item.cutout') || 0;
-        config.options.elements = { arc: { borderWidth:0 }};
+        // config.options.elements = { arc: { borderWidth:0 }};
     }
 
     //Build colours array
@@ -251,7 +252,7 @@ function loadConfiguration(type,scope) {
     if (type !== 'bar' && type !== 'horizontalBar' && JSON.parse(legend)) {
         config.options.legend = { display: true };
         if (type === 'pie') {
-            config.options.legend.position = 'left';
+            config.options.legend.position = 'bottom';
         }
 
         //set colours based on widget text colour
@@ -259,5 +260,13 @@ function loadConfiguration(type,scope) {
             config.options.legend.labels = { fontColor:themeState['widget-textColor'].value };
         }
     }
+
+    // Configure pieceLabel
+    if (type === 'pie') {
+        config.options.pieceLabel = {
+            mode: 'value'
+        };
+    }
+
     return config;
 }

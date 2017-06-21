@@ -16,6 +16,11 @@
     </div>
 </md-toolbar>
 <md-content flex>
+		<div class="side-nav">
+			<md-button ng-show="main.len > 1" ng-click="main.toggleSidenav()" class="md-icon-button" aria-label="menu button">
+				<ng-md-icon icon="menu"></ng-md-icon>
+			</md-button>
+		</div>
     <div ui-masonry ng-show="main.selectedTab.header">
         <ui-card-panel ng-repeat="group in main.selectedTab.items">
             <ui-component ng-repeat="control in group.items" item="control"></ui-component>
@@ -24,5 +29,8 @@
 	<div class="node-red-ui--inline-link" ng-show="!main.selectedTab.header">
 		<iframe class="iframe" ng-src="{{ main.selectedTab.link }}" allowfullscreen></iframe>
 		<!-- <div>The url {{ }} cannot be loaded into an iframe.</div> -->
+	</div>
+	<div class="footer">
+			Powered by <span class="redconnect-logo">redconnect</span>
 	</div>
 </md-content>
