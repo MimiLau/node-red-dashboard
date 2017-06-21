@@ -81,6 +81,7 @@ angular.module('ui').directive('uiGauge', [ '$timeout', '$interpolate',
                             gaugeOptions.donut = true;
                             //gaugeOptions.donutStartAngle = 270;
                             gaugeOptions.pointer = false;
+                            gaugeOptions.gaugeWidthScale = 0.2;
                         }
 
                         if (gaugeOptions.gaugeWidthScale === undefined) { delete gaugeOptions.gaugeWidthScale; }
