@@ -103,7 +103,7 @@ function loadConfiguration(type,scope) {
     var legend = scope.$eval('me.item.legend');
     var interpolate = scope.$eval('me.item.interpolate');
     var xFormat = scope.$eval('me.item.xformat');
-    var baseColours = scope.$eval('me.item.colors') || ['#1F77B4', '#AEC7E8', '#FF7F0E', '#2CA02C', '#98DF8A', '#D62728', '#FF9896', '#9467BD', '#C5B0D5'];
+    var baseColours = scope.$eval('me.item.colors') || ['#FFA527', '#5D69D0', '#4EBE56', '#FBF143', '#98DF8A', '#D62728', '#FF9896', '#9467BD', '#C5B0D5'];
     var config = {};
     var themeState = scope.$eval('me.item.theme.themeState');
     config.data = [];
