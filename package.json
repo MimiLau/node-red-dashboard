@@ -103,7 +103,7 @@
     "gulp-util": "^3.0.8",
     "jquery": "^2.2.4",
     "jshint": "^2.9.4",
-    "justgage": "^1.2.2",
+    "justgage": "git+https://github.com/redconnect-io/justgage.git#v1.2.2",
     "less": "^2.7.2",
     "moment": "^2.18.1",
     "sprintf-js": "^1.0.3",
