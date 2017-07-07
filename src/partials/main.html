@@ -16,11 +16,11 @@
     </div>
 </md-toolbar>
 <md-content flex>
-    <div ui-masonry ng-show="main.selectedTab.header">
-        <ui-card-panel ng-repeat="group in main.selectedTab.items">
-            <ui-component ng-repeat="control in group.items" item="control"></ui-component>
-        </ui-card-panel>
-    </div>
+  <div ui-masonry ng-show="main.selectedTab.header">
+      <ui-card-panel ng-repeat="group in main.selectedTab.items">
+          <ui-component ng-repeat="control in group.items" item="control"></ui-component>
+      </ui-card-panel>
+  </div>
 	<div class="node-red-ui--inline-link" ng-show="!main.selectedTab.header">
 		<iframe class="iframe" ng-src="{{ main.selectedTab.link }}" allowfullscreen></iframe>
 		<!-- <div>The url {{ }} cannot be loaded into an iframe.</div> -->
