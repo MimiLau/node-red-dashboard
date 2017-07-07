@@ -75,7 +75,8 @@ angular.module('ui').directive('uiGauge', [ '$timeout', '$interpolate',
                             relativeGaugeSize: true,
                             textRenderer: function(v) {
                                 return scope.$eval('me.item.getText()');
-                            }
+                            },
+                            valueFontFamily: 'Roboto'
                         }
                         if (scope.$eval('me.item.gtype') === 'donut') {
                             gaugeOptions.donut = true;
@@ -85,7 +86,7 @@ angular.module('ui').directive('uiGauge', [ '$timeout', '$interpolate',
                         }
 
                         if (gaugeOptions.gaugeWidthScale === undefined) { delete gaugeOptions.gaugeWidthScale; }
-                        if (gaugeOptions.gaugeColor === undefined) { gaugeOptions.gaugeColor = "rgba(127,127,127,0.5)"; }
+                        if (gaugeOptions.gaugeColor === undefined) { gaugeOptions.gaugeColor = "rgba(238,238,238,1)"; }
                         if (gaugeOptions.pointerOptions === undefined) { gaugeOptions.pointerOptions = {color:tgnd}; }
 
                         if (scope.$eval('me.item.gtype') === 'compass') {
